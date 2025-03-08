@@ -21,16 +21,7 @@
 
     - name: Configure Apache2 default page
       copy:
-        content: |
-          <html>
-            <head>
-              <title>Apache2 Server</title>
-            </head>
-            <body>
-              <h1>Welcome to Apache2 Server</h1>
-              <p>This server is managed by Shashank</p>
-            </body>
-          </html>
+        src: Index.html
         dest: /var/www/html/index.html
 - name: Install and Configure Nginx
   hosts: K-s
@@ -54,14 +45,5 @@
 
     - name: Configure Nginx default page
       copy:
-        content: |
-          <html>
-            <head>
-              <title>Nginx Server</title>
-            </head>
-            <body>
-              <h1>Welcome to Nginx</h1>
-              <p>This server is managed by Shashank</p>
-            </body>
-          </html>
+        src: Index1.html
         dest: /var/www/html/index.html
